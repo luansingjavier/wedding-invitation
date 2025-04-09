@@ -2,6 +2,8 @@
   background-color: var(--secondary-color);
   padding: 4rem 0;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .countdown h2 {
@@ -9,6 +11,8 @@
   color: var(--text-color);
   margin-bottom: 3rem;
   font-weight: 400;
+  padding: 0 1rem;
+  position: relative;
 }
 
 .timer {
@@ -49,27 +53,65 @@
 }
 
 @media (max-width: 768px) {
+  .countdown {
+    padding: 3rem 0.5rem;
+  }
+
   .timer {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    padding: 0 0.5rem;
+    max-width: 100%;
   }
 
   .timeUnit {
-    min-width: 80px;
+    min-width: auto;
+    width: 100%;
+    margin-bottom: 0.5rem;
   }
 
   .number {
     font-size: 2rem;
-    min-width: 70px;
-    padding: 0.75rem;
+    min-width: auto;
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
   }
 
   .label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
   }
 
   .countdown h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown {
+    padding: 2rem 0.25rem;
+  }
+
+  .timer {
+    gap: 0.5rem;
+    padding: 0 0.25rem;
+  }
+
+  .number {
+    font-size: 1.5rem;
+    padding: 0.4rem;
+  }
+
+  .label {
+    font-size: 0.65rem;
+  }
+
+  .countdown h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
   }
 }
