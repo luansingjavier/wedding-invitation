@@ -117,7 +117,7 @@
   }
 
   .divider {
-    transform: rotate(90deg);
+    margin: 1rem 0;
   }
 
   .title {
